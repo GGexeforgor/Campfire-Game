@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bsq1d7idswq8v"]
+
+[ext_resource type="Script" uid="uid://de0lgj3wubv0a" path="res://bigmoss.gd" id="1_4x277"]
+[ext_resource type="Texture2D" uid="uid://dqbw43hhcnd5w" path="res://Art.png" id="1_c3cby"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ipw5c"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ebgpx"]
+radius = 326.0
+height = 692.0
+
+[node name="bigmoss" type="CharacterBody2D"]
+scale = Vector2(0.4744209, 0.4414698)
+script = ExtResource("1_4x277")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(0.26920557, 0.284378)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_ipw5c")
+position = Vector2(-6, 1)
+texture = ExtResource("1_c3cby")
+region_enabled = true
+region_rect = Rect2(880, 1430, 673, 738)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_ebgpx")
